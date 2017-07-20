@@ -23,7 +23,7 @@ This will create the necessary directories. The `--dev` option, is pruposed for 
 
 Your templates will be **.blade.php** files.
 
-**<a>** tags:
+**a** tags:
 ```blade
 <a href="{{ TR::route($template, 'contact') }}">Go to contact page!</a>
 ```
