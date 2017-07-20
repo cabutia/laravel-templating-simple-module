@@ -24,21 +24,21 @@ This will create the necessary directories. The `--dev` option, is pruposed for 
 Your templates will be **.blade.php** files.
 
 **<a>** tags:
-```(blade)
+```blade
 <a href="{{ TR::route($template, 'contact') }}">Go to contact page!</a>
 ```
 Passing 'contact' as 2nd arg, will return the 'contact.blade.php'
 view inside the same folder than 'index.blade.php'
 
 **sources** like `<link>` and `<script>` tags, will be like this:
-```(blade)
+```blade
 <script src="{{ TR::src($template, 'your/path/to/file/in/public/folder') }}" type="text/javascript"></script>
 ```
 
 # Requirements
 
 Create a `TemplateController` file inside your `Project\app\Http\Controllers\` folder, with the next code:
-```(php)
+```php
 <?php
 
 namespace App\Http\Controllers;
@@ -65,7 +65,7 @@ class TemplateController extends Controller
 ```
 
 Create a `TemplateRouteHelper.php` with this content:
-```(php)
+```php
 <?php
 namespace App\Helpers\Functions;
 
@@ -89,6 +89,6 @@ class TemplateRouteHelper
 
 
 And add it to your aliases in your `Project\config\app.php` file:
-```(php)
+```php
 'TR' => App\Helpers\Functions\TemplateRouteHelper::class,
 ```
